@@ -1,1 +1,2 @@
 # ofxArgs
+I couldn't find a nice/simple replacement for this so I've pulled it out of an old project and uploaded it as a seperate repo. Parses command line arguments as a variety of types (string, float, int, bool) with optional default values, allowing paramaterisation of applications. To pass in arguments, start the app from terminal or from a script and use the --args flag like so `{project-path}/bin/{appname}.app/Contents/MacOS/{appname} --args -name=value -debug=true -foo=bar`
