@@ -1,4 +1,4 @@
-#include "testApp.h"
+#include "ofApp.h"
 
 /**
  To test this app, try adding these command line arguments:
@@ -9,12 +9,12 @@
  Check your console after running!
  */
 
-testApp::testApp(ofxArgs* args){
+ofApp::ofApp(ofxArgs* args){
 	this->args = args;
 }
 
 //--------------------------------------------------------------
-void testApp::setup(){
+void ofApp::setup(){
 	// for debugging, you can print the arguments and options...
 	this->args->printArgs();
 	this->args->printOpts();
@@ -56,38 +56,38 @@ void testApp::setup(){
 }
 
 //--------------------------------------------------------------
-void testApp::update(){
+void ofApp::update(){
 	
 }
 
 //--------------------------------------------------------------
-void testApp::draw(){
+void ofApp::draw(){
 	
 }
 
 //--------------------------------------------------------------
-void testApp::keyPressed  (int key){ 
+void ofApp::keyPressed  (int key){ 
 	
 }
 
 //--------------------------------------------------------------
-void testApp::keyReleased  (int key){ 
+void ofApp::keyReleased  (int key){ 
 	
 }
 
 //--------------------------------------------------------------
-void testApp::mouseMoved(int x, int y ){
+void ofApp::mouseMoved(int x, int y ){
 }
 
 //--------------------------------------------------------------
-void testApp::mouseDragged(int x, int y, int button){
+void ofApp::mouseDragged(int x, int y, int button){
 }
 
 //--------------------------------------------------------------
-void testApp::mousePressed(int x, int y, int button){
+void ofApp::mousePressed(int x, int y, int button){
 }
 
 //--------------------------------------------------------------
-void testApp::mouseReleased(){
+void ofApp::mouseReleased(){
 
 }

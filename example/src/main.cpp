@@ -1,5 +1,5 @@
 #include "ofMain.h"
-#include "testApp.h"
+#include "ofApp.h"
 #include "ofxArgs.h"
 
 //========================================================================
@@ -11,6 +11,6 @@ int main(int argc, char *argv[]){
 	ofSetupOpenGL(400,200, OF_WINDOW);			// <-------- setup the GL context
 	
 	// this kicks off the running of my app
-	ofRunApp(new testApp(args));
+	ofRunApp(new ofApp(args));
 	delete args;
 }
