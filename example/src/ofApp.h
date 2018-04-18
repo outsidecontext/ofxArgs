@@ -11,7 +11,9 @@ class ofApp : public ofBaseApp{
 		bool flag1;
 	
 	public:
-		ofApp(ofxArgs* args);
+		ofApp(ofxArgs* args){
+			this->args = args;
+		}
 		void setup();
 		void update();
 		void draw();

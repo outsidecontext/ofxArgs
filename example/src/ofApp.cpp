@@ -9,10 +9,6 @@
  Check your console after running!
  */
 
-ofApp::ofApp(ofxArgs* args){
-	this->args = args;
-}
-
 //--------------------------------------------------------------
 void ofApp::setup(){
 	// for debugging, you can print the arguments and options...
