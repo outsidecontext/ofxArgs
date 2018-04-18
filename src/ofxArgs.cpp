@@ -78,6 +78,8 @@ bool ofxArgs::getBool(string key, bool def){
 	return def;
 }
 
+
+
 float ofxArgs::getFloat(int index, float def){
 	if(index < this->argc){
 		return strToFloat(this->args[index]);
@@ -105,6 +107,17 @@ bool ofxArgs::getBool(int index, bool def){
 		return s == "true" || s == "TRUE" || strToInt(s) > 0;
 	}
 	return def;
+}
+
+template<typename T>
+T ofxArgs::get(string key, T def) {
+	map<string,string>::iterator it;
+	it = this->opts.find(key);
+	if(it != this->opts.end()){
+		return it->second;
+	}
+	return def;
+
 }
 
 void ofxArgs::printArgs(){
