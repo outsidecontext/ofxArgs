@@ -33,6 +33,10 @@ public:
 			return valueIfNotSet;
 		}
 	}
+
+	bool setIfFlag(string key) {
+		return contains(key);
+	}
 	
 	float getFloat(int index, float def = 0.0f);
 	int getInt(int index, int def = 0);
