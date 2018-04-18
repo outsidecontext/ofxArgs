@@ -74,9 +74,19 @@ string isMaster = this->setIfFlag("-master", "I am the master", "I am a slave");
 
 As long as the return type to be assigned matches the type of `valueIfSet` **and** `valueIfUnset`, you can do all of the following:
 ```
-bool verbose = this->setIfFlag("-debug", true, false);
 int instances = this->setIfFlag("-many", 1000, 1);
 float scale = this->setIfFlag("-small", 0.1, 1.0);
+```
+
+For booleans, the simplest (and usual) case can be handled by using the version of `setIfFlag` with only one parameter:
+```
+bool active = this->setIfFlag("-active");
+// will return true if the flag is set, false if not
+```
+But if you want the opposite to happen (sometimes useful), then provide the defaults explicity:
+```
+bool verbose = this->setIfFlag("-quiet", false, true);
+// will return false if the flag IS set, true if NOT
 ```
 
 ### Other useful functions
