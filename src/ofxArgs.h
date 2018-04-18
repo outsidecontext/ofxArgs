@@ -21,9 +21,6 @@ public:
 	
 	bool contains(string key);
 
-	template<typename T>
-	T get(string key, T def);
-
 	float getFloat(string key, float def = 0.0f);
 	int getInt(string key, int def = 0);
 	string getString(string key, string def = "");

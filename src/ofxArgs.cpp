@@ -109,17 +109,6 @@ bool ofxArgs::getBool(int index, bool def){
 	return def;
 }
 
-template<typename T>
-T ofxArgs::get(string key, T def) {
-	map<string,string>::iterator it;
-	it = this->opts.find(key);
-	if(it != this->opts.end()){
-		return it->second;
-	}
-	return def;
-
-}
-
 void ofxArgs::printArgs(){
 	cout << "--- arguments --------" << endl;
 	for(int i=0; i < this->argc; i++)
