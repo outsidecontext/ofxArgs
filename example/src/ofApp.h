@@ -4,14 +4,16 @@
 #include "ofMain.h"
 #include "ofxArgs.h"
 
-class testApp : public ofSimpleApp{
+class ofApp : public ofBaseApp{
 	private:
 		ofxArgs* args;
 		string option1, option2;
 		bool flag1;
 	
 	public:
-		testApp(ofxArgs* args);
+		ofApp(ofxArgs* args){
+			this->args = args;
+		}
 		void setup();
 		void update();
 		void draw();

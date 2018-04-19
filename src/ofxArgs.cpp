@@ -78,6 +78,8 @@ bool ofxArgs::getBool(string key, bool def){
 	return def;
 }
 
+
+
 float ofxArgs::getFloat(int index, float def){
 	if(index < this->argc){
 		return strToFloat(this->args[index]);

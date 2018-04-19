@@ -26,6 +26,18 @@ public:
 	string getString(string key, string def = "");
 	bool getBool(string key, bool def = false);
 	
+	template<typename T> T setIfFlag(string key, T valueIfSet, T valueIfNotSet) {
+		if (contains(key)) {
+			return valueIfSet;
+		} else {
+			return valueIfNotSet;
+		}
+	}
+
+	bool setIfFlag(string key) {
+		return contains(key);
+	}
+	
 	float getFloat(int index, float def = 0.0f);
 	int getInt(int index, int def = 0);
 	string getString(int index, string def = "");
