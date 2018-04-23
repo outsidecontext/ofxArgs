@@ -8,7 +8,7 @@ ofxArgs::ofxArgs(int argc, char* argv[]){
 		cVal = argv[i];
 		nextVal = (i < argc-1)?argv[i+1]:"";
 		
-		uint pos = cVal.find('=');
+		int pos = cVal.find('=');
 		if(pos != string::npos){
 			string key = cVal.substr(0, pos);
 			string value = cVal.substr(pos+1);
